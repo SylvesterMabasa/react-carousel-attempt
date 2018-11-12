@@ -1,0 +1,50 @@
+.slider {
+  max-width: 900px;
+  margin: 5px auto;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  overflow-x: hidden;
+  border-radius: 5px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: mandatory;
+}
+
+.rightArrow {
+  float: right;
+  position: absolute;
+  right: 0;
+  top: calc(20% - 10px);
+}
+
+.leftArrow {
+  float: left;
+  position: absolute;
+  left: 0;
+  top: calc(20% - 10px);
+}
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.rightArrow .tooltiptext {
+  top: -5px;
+  right: 105%;
+}
+
+.leftArrow:hover .tooltiptext {
+  visibility: visible;
+}
+.rightArrow:hover .tooltiptext {
+  visibility: visible;
+}
